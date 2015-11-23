@@ -89,7 +89,6 @@
       autoScroll:  function (args) {
         // If autoScroll timer is running then cancel and scroll to the bottom
         if ($timeout.cancel(args.api.grid.autoScroll.scrollTimeout)) {
-          $timeout.cancel(args.api.grid.autoScroll.scrollTimeout);
           args.api.core.scrollTo(args.api.grid.options.data[args.api.grid.options.data.length - 1]);
         }
         
