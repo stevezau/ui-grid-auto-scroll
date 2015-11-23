@@ -88,14 +88,14 @@
        */
       autoScroll:  function (args) {
         // If autoScroll timer is running then cancel and scroll to the bottom
-        if (angular.isDefined(args.api.grid.autoScroll.scrollTimeout)) {
+        if ($timeout.cancel(args.api.grid.autoScroll.scrollTimeout)) {
           $timeout.cancel(args.api.grid.autoScroll.scrollTimeout);
           args.api.core.scrollTo(args.api.grid.options.data[args.api.grid.options.data.length - 1]);
         }
         
         // Delay to allow new data items to be added to the grid before scrolling
         args.api.grid.autoScroll.scrollTimeout = $timeout(function () {
-          if (args.api.grid.autoScroll.prevScrollPercent > 0.98) {
+          if (args.api.grid.autoScroll.prevScrollPercent > 0.99) {
             args.api.core.scrollTo(args.api.grid.options.data[args.api.grid.options.data.length - 1]);
           }
         }, 50);
@@ -144,7 +144,8 @@
    </file>
    <file name="index.html">
    <div ng-controller="MainCtrl">
-   <div ui-grid="{ data: data, columnDefs: columnDefs }" ui-grid-auto-scroll="20"></div>
+   <div id="grid1" ui-grid="gridOptions" class="grid" ui-grid-auto-scroll></div>
+   <button ng-click="addData()">Add more</button>
    </div>
    </file>
    </example>
