@@ -77,7 +77,6 @@
         }
       },
 
-
       /**
        * @ngdoc function
        * @name autoScroll
@@ -93,11 +92,11 @@
         }
         
         // Delay to allow new data items to be added to the grid before scrolling
-        args.api.grid.autoScroll.scrollTimeout = $timeout(function () {
-          if (args.api.grid.autoScroll.prevScrollPercent > 0.99) {
+        if (args.api.grid.autoScroll.prevScrollPercent > 0.99) {
+          args.api.grid.autoScroll.scrollTimeout = $timeout(function () {
             args.api.core.scrollTo(args.api.grid.options.data[args.api.grid.options.data.length - 1]);
-          }
-        }, 50);
+          }, 50);
+        }
       }
     };
     return service;
