@@ -1,0 +1,28 @@
+{
+  "name": "ui-grid-auto-scroll",
+  "version": "0.1",
+  "authors": [
+    "Steven Adams <stevezau@gmail.com>"
+  ],
+  "description": "Auto scroll functionality to angular ui-grid",
+  "main": "js/auto-scroll.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "ui-grid",
+    "auto",
+    "scroll",
+    "bottom"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".eslintrc"
+  ]
+}
