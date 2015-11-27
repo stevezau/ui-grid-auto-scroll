@@ -27,7 +27,7 @@
        * @ngdoc function
        * @name initializeGrid
        * @methodOf ui.grid.autoScroll.service:uiGridAutoScrollService
-       * @description This method register events and methods into grid public API
+       * @description This method registers events and methods into the grid's public API
        */
 
       initializeGrid: function(grid, $scope) {
@@ -44,7 +44,7 @@
 
 
       defaultGridOptions: function (gridOptions) {
-        //default option to true unless it was explicitly set to false
+        //default option is true unless it was explicitly set to false
         /**
          *  @ngdoc object
          *  @name ui.grid.autoScroll.api:GridOptions
@@ -67,7 +67,7 @@
        * @ngdoc function
        * @name handleScroll
        * @methodOf ui.grid.autoScroll.service:uiGridAutoScrollService
-       * @description Called whenever the grid scrolls, determines whether the gird should
+       * @description Called whenever the grid scrolls, determines whether the grid should
        * scroll when new data is added
        * @param {object} args the args from the event
        */
