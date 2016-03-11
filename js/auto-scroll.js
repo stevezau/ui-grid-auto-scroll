@@ -92,7 +92,7 @@
         }
         
         // Delay to allow new data items to be added to the grid before scrolling
-        if (args.api.grid.autoScroll.prevScrollPercent > 0.99) {
+        if (args.api.grid.autoScroll.prevScrollPercent > 0.99 || args.api.grid.autoScroll.prevScrollPercent == -0) {
           args.api.grid.autoScroll.scrollTimeout = $timeout(function () {
             args.api.core.scrollTo(args.api.grid.options.data[args.api.grid.options.data.length - 1]);
           }, 50);
